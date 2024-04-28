@@ -1,0 +1,76 @@
+DAY 2
+
+Data Types, mathematical operations, string manipluations
+
+
+String -> String is a collection of alphabets, words or other characters.
+Print("hello"[0]) -> hello is a string gives the output h (Taking out character from string is called subscripting)
+
+Integer ->Int. Int, or integer, is a whole number, positive or negative, without decimals, of unlimited length
+print(12+24) -> gives our sum i.e 36, if print("12"+"24") -> gives out 1224 as this is string we have mentioned
+ 
+Float ->Floating point numbers are decimal values or fractional numbers like 133.5, 2897.11, and 3571.213, whereas real numbers like 56, 2, and 33 are called integers.
+print(3.14) -> this is a Float number
+
+Boolean ->The python data type bool is used to store two values i.e True and False
+
+------------------------------------------------
+
+print(type(variable)) -> gives out the type of variable it is i.e string, integar, float , boolean etc. 
+str(variable) -> to convert the variable into string
+float(variable) -> to convert to float
+int(variable) -> to convert to int
+
+------------------------------------------------
+
+mathematical operations in python
+3+5 -> addition
+5-3 -> subtraction
+8/2 -> division
+3*2 -> multiplication
+2**3 -> exponential (2 to power 3 = 8)
+
+as there is BODMAS there is PEDMAS in Python
+PEDMAS -> parentheses, exponents, multiplication, division, addition, and subtraction
+
+-----------------------------------------------
+
+String Manipulations
+
+print(round(8/3, 2)) -> it shows the output in round number i.e 2.67 in this case. value after the , tells us till which digit we need to round the numbers
+print (8//3) -> this is floor division and it print out number 2 after rounding off.
+
+score = 1
+ 
+score += -> adds to score variable 
+score -= -> subtracts to score variable
+score *= -> multiply to score variable
+Score /= -> divide to score variable
+
+a string cannot be concatenated to an integer, if you dnt want to convert the integar first to str then follow f string for speeded up process
+ex -> print(f" your score is {variable_which_is_int} you are winning by {Varibale_which_is_float}")
+
+Day 2 Program
+Tip Calculator
+
+#If the bill was $150.00, split between 5 people, with 12% tip. 
+#Each person should pay (150.00 / 5) * 1.12 = 33.6
+#Round the result to 2 decimal places.
+print("Welcome to the tip calculator!")
+bill = float(input("What was the total bill? $"))
+tip = int(input("How much tip would you like to give? 10, 12, or 15? "))
+people = int(input("How many people to split the bill?"))
+
+tip_as_percent = tip / 100
+total_tip_amount = bill * tip_as_percent
+total_bill = bill + total_tip_amount
+bill_per_person = total_bill / people
+final_amount = round(bill_per_person, 2)
+
+
+# FAQ: How to round to 2 decimal places?
+
+# Find the answer in the Q&A here: https://www.udemy.com/course/100-days-of-code/learn/lecture/17965132#questions/13315048
+
+
+print(f"Each person should pay: ${final_amount}")
