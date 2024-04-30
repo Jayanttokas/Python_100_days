@@ -1,0 +1,89 @@
+Day 4 
+ 
+Randomization and python list
+
+to use random module in our code
+
+import random
+random_int =  random.randint(1, 10) -> random integer between 1 to 10 
+print (random_int)
+
+random_float =  random.random() -> it includes 0 and not 1 if anything is not defined. (defines a float)  
+to expand the float range 
+random_float = random.random() * 5 (now range becomes 0 to 4.9999)
+
+
+module -> a module is basically set of code that is defined to a specific work / function
+multiple modules working together is a function
+
+to create a module 
+create a new .py file define the functionality and then import the same file into the code file
+
+List 
+
+List is python data structure which is used to store the data. 
+example = [a,b,c]
+
+list always start with [] brackets. List start with [0] as the first entry not [1]. 
+programmers start counting with 0 not 1.  if -1 then it is the last item of the list. 
+
+to add a new item to the list
+list.append("entry") -> this gets added to the list in the end of the list.
+can check on documentation under data structure for different functions available for the list such as extend, insert, remove etc and how they are used as well.
+
+if we go beyond the last item of the list then it will be an index error.
+
+A list can have multiple list inside it. nested list also we can define. 
+
+Fourth Program (Rock Paper scissors game)
+
+import random
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+game_images = [rock, paper, scissors]
+
+user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
+print(game_images[user_choice])
+
+computer_choice = random.randint(0, 2)
+print("Computer chose:")
+print(game_images[computer_choice])
+
+if user_choice >= 3 or user_choice < 0: 
+  print("You typed an invalid number, you lose!") 
+elif user_choice == 0 and computer_choice == 2:
+  print("You win!")
+elif computer_choice == 0 and user_choice == 2:
+  print("You lose")
+elif computer_choice > user_choice:
+  print("You lose")
+elif user_choice > computer_choice:
+  print("You win!")
+elif computer_choice == user_choice:
+  print("It's a draw")
